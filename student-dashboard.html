@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | Pan-African Peace Network</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Chart.js for Progress Charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <img src="assets/images/logo.png" alt="Logo">
+                    <span>Peace Network</span>
+                </div>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="user-profile">
+                <img src="assets/images/avatar-student.jpg" alt="Student" class="user-avatar">
+                <div class="user-info">
+                    <h4 id="studentName">Student Name</h4>
+                    <span id="studentEmail">student@email.com</span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="#" class="nav-link active" data-page="overview">
+                            <i class="fas fa-th-large"></i>
+                            <span>Overview</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link" data-page="my-courses">
+                            <i class="fas fa-book-open"></i>
+                            <span>My Courses</span>
+                            <span class="badge-count">3</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link" data-page="my-voices">
+                            <i class="fas fa-feather-alt"></i>
+                            <span>My Voices</span>
+                            <span class="badge-count">5</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link" data-page="certificates">
+                            <i class="fas fa-certificate"></i>
+                            <span>Certificates</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link" data-page="bookmarks">
+                            <i class="fas fa-bookmark"></i>
+                            <span>Bookmarks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link" data-page="profile">
+                            <i class="fas fa-user-cog"></i>
+                            <span>Profile Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Back to Website</span>
+                </a>
+                <a href="#" class="nav-link logout-btn" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="top-bar-left">
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h2 id="pageTitle">Dashboard Overview</h2>
+                </div>
+                
+                <div class="top-bar-right">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search courses...">
+                    </div>
+                    
+                    <div class="notifications">
+                        <button class="notification-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </button>
+                        
+                        <div class="notification-dropdown">
+                            <div class="notification-header">
+                                <h4>Notifications</h4>
+                                <a href="#">Mark all read</a>
+                            </div>
+                            <div class="notification-list">
+                                <div class="notification-item unread">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <div>
+                                        <p>Course completed: Peace Studies 101</p>
+                                        <span>2 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="notification-item unread">
+                                    <i class="fas fa-star"></i>
+                                    <div>
+                                        <p>Your voice was featured in Our Book!</p>
+                                        <span>1 day ago</span>
+                                    </div>
+                                </div>
+                                <div class="notification-item">
+                                    <i class="fas fa-certificate"></i>
+                                    <div>
+                                        <p>New certificate available</p>
+                                        <span>3 days ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="user-menu">
+                        <img src="assets/images/avatar-student.jpg" alt="User">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Pages -->
+            <div class="dashboard-pages">
+                <!-- Overview Page -->
+                <div class="page-content active" id="overview">
+                    <!-- Welcome Banner -->
+                    <div class="welcome-banner" data-aos="fade-up">
+                        <div class="welcome-text">
+                            <h1>Welcome back, <span id="welcomeName">Student</span>! 👋</h1>
+                            <p>Continue your learning journey towards peace and unity</p>
+                        </div>
+                        <div class="welcome-stats">
+                            <div class="welcome-stat">
+                                <i class="fas fa-book-open"></i>
+                                <span class="stat-value" id="enrolledCount">3</span>
+                                <span class="stat-label">Enrolled</span>
+                            </div>
+                            <div class="welcome-stat">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="stat-value" id="completedCount">1</span>
+                                <span class="stat-label">Completed</span>
+                            </div>
+                            <div class="welcome-stat">
+                                <i class="fas fa-certificate"></i>
+                                <span class="stat-value" id="certCount">1</span>
+                                <span class="stat-label">Certificates</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Stats Grid -->
+                    <div class="stats-grid-dash" data-aos="fade-up">
+                        <div class="stat-card">
+                            <div class="stat-icon blue">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>24.5 hrs</h3>
+                                <p>Learning Time</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon green">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>85%</h3>
+                                <p>Overall Progress</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon yellow">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>4.8</h3>
+                                <p>Average Score</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon red">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>7 Days</h3>
+                                <p>Learning Streak</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Current Courses & Progress -->
+                    <div class="dashboard-grid">
+                        <!-- Current Courses -->
+                        <div class="dashboard-card" data-aos="fade-up">
+                            <div class="card-header">
+                                <h3>Continue Learning</h3>
+                                <a href="#" class="view-all" data-page="my-courses">View All</a>
+                            </div>
+                            
+                            <div class="current-courses">
+                                <div class="current-course-item">
+                                    <div class="course-progress-img">
+                                        <img src="assets/images/course-peace101.jpg" alt="Peace Studies">
+                                        <div class="progress-overlay">
+                                            <div class="progress-circle" data-progress="75">
+                                                <svg>
+                                                    <circle cx="30" cy="30" r="25"></circle>
+                                                    <circle cx="30" cy="30" r="25" class="progress"></circle>
+                                                </svg>
+                                                <span>75%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="course-info">
+                                        <h4>Introduction to Peace Studies</h4>
+                                        <p>Lesson 8 of 12</p>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 75%"></div>
+                                        </div>
+                                        <a href="#" class="btn btn-small">Continue</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="current-course-item">
+                                    <div class="course-progress-img">
+                                        <img src="assets/images/course-leadership.jpg" alt="Leadership">
+                                        <div class="progress-overlay">
+                                            <div class="progress-circle" data-progress="45">
+                                                <svg>
+                                                    <circle cx="30" cy="30" r="25"></circle>
+                                                    <circle cx="30" cy="30" r="25" class="progress"></circle>
+                                                </svg>
+                                                <span>45%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="course-info">
+                                        <h4>Grassroots Community Organizing</h4>
+                                        <p>Lesson 5 of 15</p>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 45%"></div>
+                                        </div>
+                                        <a href="#" class="btn btn-small">Continue</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Learning Progress Chart -->
+                        <div class="dashboard-card" data-aos="fade-up">
+                            <div class="card-header">
+                                <h3>Learning Progress</h3>
+                                <select class="chart-period">
+                                    <option>This Week</option>
+                                    <option>This Month</option>
+                                    <option>This Year</option>
+                                </select>
+                            </div>
+                            <canvas id="progressChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Recent Voices -->
+                    <div class="dashboard-card" data-aos="fade-up">
+                        <div class="card-header">
+                            <h3>My Recent Voices</h3>
+                            <a href="#" class="view-all" data-page="my-voices">View All</a>
+                        </div>
+                        
+                        <div class="recent-voices">
+                            <div class="voice-item">
+                                <div class="voice-item-header">
+                                    <span class="badge peace">Peace</span>
+                                    <span class="voice-date">2 days ago</span>
+                                </div>
+                                <p>"Peace begins with understanding our shared humanity..."</p>
+                                <div class="voice-item-footer">
+                                    <span><i class="far fa-heart"></i> 24 likes</span>
+                                    <span class="voice-status approved">Approved</span>
+                                </div>
+                            </div>
+                            
+                            <div class="voice-item">
+                                <div class="voice-item-header">
+                                    <span class="badge unity">Unity</span>
+                                    <span class="voice-date">5 days ago</span>
+                                </div>
+                                <p>"United we stand, divided we fall. African unity is our strength..."</p>
+                                <div class="voice-item-footer">
+                                    <span><i class="far fa-heart"></i> 18 likes</span>
+                                    <span class="voice-status pending">Pending</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- My Courses Page -->
+                <div class="page-content" id="my-courses">
+                    <div class="page-header" data-aos="fade-up">
+                        <h2>My Courses</h2>
+                        <div class="course-tabs">
+                            <button class="tab-btn active" data-tab="all">All Courses</button>
+                            <button class="tab-btn" data-tab="in-progress">In Progress</button>
+                            <button class="tab-btn" data-tab="completed">Completed</button>
+                        </div>
+                    </div>
+                    
+                    <div class="enrolled-courses-grid" id="enrolledCourses" data-aos="fade-up">
+                        <!-- Course Card 1 - In Progress -->
+                        <div class="enrolled-course-card" data-status="in-progress">
+                            <div class="course-card-header">
+                                <img src="assets/images/course-peace101.jpg" alt="Peace Studies">
+                                <span class="course-status in-progress">In Progress</span>
+                            </div>
+                            <div class="course-card-body">
+                                <h3>Introduction to Peace Studies</h3>
+                                <p>Dr. Fatima Ouedraogo</p>
+                                <div class="course-progress-section">
+                                    <div class="progress-text">
+                                        <span>Progress</span>
+                                        <span>75%</span>
+                                    </div>
+                                    <div class="progress-bar large">
+                                        <div class="progress-fill" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <div class="course-card-meta">
+                                    <span><i class="fas fa-clock"></i> 4 Weeks</span>
+                                    <span><i class="fas fa-book"></i> 8/12 Lessons</span>
+                                </div>
+                                <div class="course-card-actions">
+                                    <a href="#" class="btn btn-primary btn-small">Continue Learning</a>
+                                    <button class="btn-icon" title="Course Details">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Course Card 2 - In Progress -->
+                        <div class="enrolled-course-card" data-status="in-progress">
+                            <div class="course-card-header">
+                                <img src="assets/images/course-leadership.jpg" alt="Leadership">
+                                <span class="course-status in-progress">In Progress</span>
+                            </div>
+                            <div class="course-card-body">
+                                <h3>Grassroots Community Organizing</h3>
+                                <p>Mama Esther Wanjiru</p>
+                                <div class="course-progress-section">
+                                    <div class="progress-text">
+                                        <span>Progress</span>
+                                        <span>45%</span>
+                                    </div>
+                                    <div class="progress-bar large">
+                                        <div class="progress-fill" style="width: 45%"></div>
+                                    </div>
+                                </div>
+                                <div class="course-card-meta">
+                                    <span><i class="fas fa-clock"></i> 5 Weeks</span>
+                                    <span><i class="fas fa-book"></i> 5/15 Lessons</span>
+                                </div>
+                                <div class="course-card-actions">
+                                    <a href="#" class="btn btn-primary btn-small">Continue Learning</a>
+                                    <button class="btn-icon" title="Course Details">
+                                        <i class="fas fa-info-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Course Card 3 - Completed -->
+                        <div class="enrolled-course-card" data-status="completed">
+                            <div class="course-card-header">
+                                <img src="assets/images/course-culture.jpg" alt="African Art">
+                                <span class="course-status completed">Completed</span>
+                            </div>
+                            <div class="course-card-body">
+                                <h3>African Art as Resistance</h3>
+                                <p>Prof. Aminata Sow</p>
+                                <div class="course-progress-section">
+                                    <div class="progress-text">
+                                        <span>Progress</span>
+                                        <span>100%</span>
+                                    </div>
+                                    <div class="progress-bar large">
+                                        <div class="progress-fill" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                                <div class="course-card-meta">
+                                    <span><i class="fas fa-check-circle"></i> Completed</span>
+                                    <span><i class="fas fa-star"></i> Grade: A</span>
+                                </div>
+                                <div class="course-card-actions">
+                                    <a href="#" class="btn btn-secondary btn-small">
+                                        <i class="fas fa-certificate"></i> View Certificate
+                                    </a>
+                                    <button class="btn-icon" title="Review Course">
+                                        <i class="fas fa-redo"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Browse More Courses -->
+                    <div class="browse-more" data-aos="fade-up">
+                        <h3>Discover More Courses</h3>
+                        <p>Explore our catalog of free courses</p>
+                        <a href="courses.html" class="btn btn-primary">
+                            <i class="fas fa-search"></i> Browse Courses
+                        </a>
+                    </div>
+                </div>
+
+                <!-- My Voices Page -->
+                <div class="page-content" id="my-voices">
+                    <div class="page-header" data-aos="fade-up">
+                        <h2>My Voices</h2>
+                        <a href="our-book.html" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Add New Voice
+                        </a>
+                    </div>
+                    
+                    <div class="voices-list" data-aos="fade-up">
+                        <div class="voice-card-full">
+                            <div class="voice-card-status approved">Approved</div>
+                            <p class="voice-text-full">"Peace begins with understanding our shared humanity. When we recognize that we are all brothers and sisters, conflict becomes impossible."</p>
+                            <div class="voice-meta-full">
+                                <span class="badge peace">Peace</span>
+                                <span><i class="far fa-heart"></i> 24</span>
+                                <span><i class="far fa-comment"></i> 5</span>
+                                <span class="voice-date">Submitted: Jan 15, 2024</span>
+                            </div>
+                        </div>
+                        
+                        <div class="voice-card-full">
+                            <div class="voice-card-status pending">Pending Review</div>
+                            <p class="voice-text-full">"United we stand, divided we fall. African unity is our strength and our path to a brighter future for all our children."</p>
+                            <div class="voice-meta-full">
+                                <span class="badge unity">Unity</span>
+                                <span><i class="far fa-heart"></i> 18</span>
+                                <span><i class="far fa-comment"></i> 3</span>
+                                <span class="voice-date">Submitted: Jan 18, 2024</span>
+                            </div>
+                        </div>
+                        
+                        <div class="voice-card-full">
+                            <div class="voice-card-status rejected">Needs Revision</div>
+                            <p class="voice-text-full">"Love is the answer to all of Africa's challenges..."</p>
+                            <div class="voice-meta-full">
+                                <span class="badge love">Love</span>
+                                <span><i class="far fa-heart"></i> 12</span>
+                                <span class="voice-date">Submitted: Jan 20, 2024</span>
+                            </div>
+                            <div class="voice-feedback">
+                                <strong>Feedback:</strong> Please expand on your idea with specific examples.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificates Page -->
+                <div class="page-content" id="certificates">
+                    <div class="page-header" data-aos="fade-up">
+                        <h2>My Certificates</h2>
+                    </div>
+                    
+                    <div class="certificates-grid" data-aos="fade-up">
+                        <div class="certificate-card">
+                            <div class="certificate-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h3>Peace Studies Fundamentals</h3>
+                            <p>Completed on January 10, 2024</p>
+                            <div class="certificate-actions">
+                                <button class="btn btn-primary btn-small">
+                                    <i class="fas fa-download"></i> Download
+                                </button>
+                                <button class="btn btn-secondary btn-small">
+                                    <i class="fas fa-share"></i> Share
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="certificate-card locked">
+                            <div class="certificate-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <h3>Community Leadership</h3>
+                            <p>Complete the course to unlock</p>
+                            <div class="certificate-actions">
+                                <button class="btn btn-secondary btn-small" disabled>
+                                    Locked
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bookmarks Page -->
+                <div class="page-content" id="bookmarks">
+                    <div class="page-header" data-aos="fade-up">
+                        <h2>Bookmarked Voices</h2>
+                    </div>
+                    
+                    <div class="bookmarks-list" data-aos="fade-up">
+                        <div class="bookmark-item">
+                            <i class="fas fa-quote-right"></i>
+                            <p>"The future of Africa lies not in our individual nations, but in our collective spirit..."</p>
+                            <div class="bookmark-author">- Dr. Amina Diallo, Senegal</div>
+                            <button class="remove-bookmark">
+                                <i class="fas fa-bookmark"></i> Remove
+                            </button>
+                        </div>
+                        
+                        <div class="bookmark-item">
+                            <i class="fas fa-quote-right"></i>
+                            <p>"Peace is the foundation upon which we build our future..."</p>
+                            <div class="bookmark-author">- Kofi Mensah, Ghana</div>
+                            <button class="remove-bookmark">
+                                <i class="fas fa-bookmark"></i> Remove
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Settings Page -->
+                <div class="page-content" id="profile">
+                    <div class="page-header" data-aos="fade-up">
+                        <h2>Profile Settings</h2>
+                    </div>
+                    
+                    <div class="profile-container" data-aos="fade-up">
+                        <div class="profile-sidebar">
+                            <div class="profile-avatar-section">
+                                <img src="assets/images/avatar-student.jpg" alt="Profile" id="profileAvatar">
+                                <button class="btn btn-small change-avatar">
+                                    <i class="fas fa-camera"></i> Change Photo
+                                </button>
+                            </div>
+                            
+                            <div class="profile-nav">
+                                <button class="profile-nav-btn active" data-profile="personal">
+                                    <i class="fas fa-user"></i> Personal Info
+                                </button>
+                                <button class="profile-nav-btn" data-profile="password">
+                                    <i class="fas fa-lock"></i> Password
+                                </button>
+                                <button class="profile-nav-btn" data-profile="notifications">
+                                    <i class="fas fa-bell"></i> Notifications
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-form-container">
+                            <!-- Personal Info Form -->
+                            <form class="profile-form active" id="personalForm">
+                                <h3>Personal Information</h3>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>First Name</label>
+                                        <input type="text" value="John" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Last Name</label>
+                                        <input type="text" value="Doe" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" value="student@peace.com" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Country</label>
+                                    <select>
+                                        <option>Nigeria 🇳🇬</option>
+                                        <option>Ghana 🇬🇭</option>
+                                        <option selected>Kenya 🇰🇪</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Bio</label>
+                                    <textarea rows="4">Passionate about peace and unity in Africa. Learning to make a difference in my community.</textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                            </form>
+                            
+                            <!-- Password Form -->
+                            <form class="profile-form" id="passwordForm">
+                                <h3>Change Password</h3>
+                                
+                                <div class="form-group">
+                                    <label>Current Password</label>
+                                    <input type="password" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>New Password</label>
+                                    <input type="password" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Confirm New Password</label>
+                                    <input type="password" required>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary">Update Password</button>
+                            </form>
+                            
+                            <!-- Notifications Form -->
+                            <form class="profile-form" id="notificationsForm">
+                                <h3>Notification Preferences</h3>
+                                
+                                <div class="notification-option">
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                    <span>Course updates</span>
+                                </div>
+                                
+                                <div class="notification-option">
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                    <span>Voice approvals</span>
+                                </div>
+                                
+                                <div class="notification-option">
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                    <span>Newsletter</span>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary">Save Preferences</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
