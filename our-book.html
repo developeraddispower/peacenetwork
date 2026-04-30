@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Book | Voices of Peace, Love & Unity</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/our-book.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Logo">
+                <span>Peace Network</span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="our-book.html" class="active">Our Book</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+            </ul>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Book Header -->
+    <section class="book-header">
+        <div class="book-header-content" data-aos="fade-down">
+            <h1>📖 Our Book of Voices</h1>
+            <p class="subtitle">A living collection of thoughts on Peace, Love, Unity & Pan-Africanism</p>
+            <p class="book-description">Every voice matters. Every opinion shapes our future. This is our collective wisdom.</p>
+            
+            <div class="book-stats">
+                <div class="book-stat">
+                    <i class="fas fa-feather-alt"></i>
+                    <span class="count">5,420</span>
+                    <span class="stat-label">Voices</span>
+                </div>
+                <div class="book-stat">
+                    <i class="fas fa-globe-africa"></i>
+                    <span class="count">54</span>
+                    <span class="stat-label">Nations</span>
+                </div>
+                <div class="book-stat">
+                    <i class="fas fa-heart"></i>
+                    <span class="count">12.5k</span>
+                    <span class="stat-label">Likes</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter & Search Section -->
+    <section class="book-filters" data-aos="fade-up">
+        <div class="container">
+            <div class="filter-bar">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchVoices" placeholder="Search voices by keyword...">
+                </div>
+                
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-book"></i> All Voices
+                    </button>
+                    <button class="filter-btn" data-filter="peace">
+                        <i class="fas fa-dove"></i> Peace
+                    </button>
+                    <button class="filter-btn" data-filter="love">
+                        <i class="fas fa-heart"></i> Love
+                    </button>
+                    <button class="filter-btn" data-filter="unity">
+                        <i class="fas fa-hands-helping"></i> Unity
+                    </button>
+                    <button class="filter-btn" data-filter="panafricanism">
+                        <i class="fas fa-globe-africa"></i> Pan-Africanism
+                    </button>
+                </div>
+                
+                <div class="sort-options">
+                    <select id="sortVoices">
+                        <option value="recent">Most Recent</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="oldest">Oldest First</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Voices Grid -->
+    <section class="voices-section">
+        <div class="container">
+            <!-- Featured Voice of the Day -->
+            <div class="voice-of-day" data-aos="fade-up">
+                <div class="vod-badge">
+                    <i class="fas fa-star"></i> Voice of the Day
+                </div>
+                <div class="vod-card">
+                    <div class="vod-user">
+                        <img src="assets/images/featured-avatar.jpg" alt="Featured Voice">
+                        <div class="vod-user-info">
+                            <h3>Dr. Amina Diallo</h3>
+                            <span class="country">
+                                <img src="assets/flags/senegal.png" alt="Senegal Flag"> Senegal 🇸🇳
+                            </span>
+                            <span class="badge">Pan-Africanism</span>
+                        </div>
+                    </div>
+                    <div class="vod-content">
+                        <p>"The future of Africa lies not in our individual nations, but in our collective spirit. When we unite, we don't just share resources—we share dreams, wisdom, and the unshakeable belief that together, we are unstoppable. Pan-Africanism is not just an ideology; it's our destiny written in the stars."</p>
+                    </div>
+                    <div class="vod-actions">
+                        <button class="action-btn like-btn" data-likes="543">
+                            <i class="far fa-heart"></i> <span>543</span>
+                        </button>
+                        <button class="action-btn share-btn">
+                            <i class="fas fa-share"></i> Share
+                        </button>
+                        <button class="action-btn bookmark-btn">
+                            <i class="far fa-bookmark"></i> Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Voices Grid Container -->
+            <div class="voices-container" id="voicesGrid">
+                <!-- Voice Card 1 -->
+                <div class="voice-card" data-category="peace" data-aos="fade-up">
+                    <div class="voice-card-inner">
+                        <div class="voice-quote-icon">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <p class="voice-text">"Peace is not just the absence of war, but the presence of justice. Until every African child can dream without fear, our work for peace continues."</p>
+                        <div class="voice-author">
+                            <img src="assets/images/avatar1.jpg" alt="Kofi Annan">
+                            <div class="author-info">
+                                <strong>Kofi Mensah</strong>
+                                <span>Accra, Ghana 🇬🇭</span>
+                            </div>
+                        </div>
+                        <div class="voice-meta">
+                            <span class="category-badge peace">Peace</span>
+                            <button class="like-btn-mini">
+                                <i class="far fa-heart"></i> 234
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Voice Card 2 -->
+                <div class="voice-card" data-category="love" data-aos="fade-up" data-aos-delay="100">
+                    <div class="voice-card-inner">
+                        <div class="voice-quote-icon">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <p class="voice-text">"Love is the bridge that connects all African hearts. From Cape Town to Cairo, our shared humanity makes us one family."</p>
+                        <div class="voice-author">
+                            <img src="assets/images/avatar2.jpg" alt="Nelson Mandela">
+                            <div class="author-info">
+                                <strong>Thandi Ndlovu</strong>
+                                <span>Johannesburg, South Africa 🇿🇦</span>
+                            </div>
+                        </div>
+                        <div class="voice-meta">
+                            <span class="category-badge love">Love</span>
+                            <button class="like-btn-mini">
+                                <i class="far fa-heart"></i> 189
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Voice Card 3 -->
+                <div class="voice-card" data-category="unity" data-aos="fade-up" data-aos-delay="200">
+                    <div class="voice-card-inner">
+                        <div class="voice-quote-icon">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <p class="voice-text">"Our diversity is not a weakness but our greatest strength. United, we paint a masterpiece of cultures, languages, and dreams."</p>
+                        <div class="voice-author">
+                            <img src="assets/images/avatar3.jpg" alt="Wangari Maathai">
+                            <div class="author-info">
+                                <strong>Wanjiku Kamau</strong>
+                                <span>Nairobi, Kenya 🇰🇪</span>
+                            </div>
+                        </div>
+                        <div class="voice-meta">
+                            <span class="category-badge unity">Unity</span>
+                            <button class="like-btn-mini">
+                                <i class="far fa-heart"></i> 312
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Voice Card 4 -->
+                <div class="voice-card" data-category="panafricanism" data-aos="fade-up" data-aos-delay="300">
+                    <div class="voice-card-inner">
+                        <div class="voice-quote-icon">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <p class="voice-text">"Pan-Africanism is the heartbeat of our continent. It reminds us that we rise together or not at all. Our ancestors dreamed this—now we live it."</p>
+                        <div class="voice-author">
+                            <img src="assets/images/avatar4.jpg" alt="Kwame Nkrumah">
+                            <div class="author-info">
+                                <strong>Kwame Asante</strong>
+                                <span>Kumasi, Ghana 🇬🇭</span>
+                            </div>
+                        </div>
+                        <div class="voice-meta">
+                            <span class="category-badge panafricanism">Pan-Africanism</span>
+                            <button class="like-btn-mini">
+                                <i class="far fa-heart"></i> 456
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More voice cards will be dynamically loaded from Firebase -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container" data-aos="fade-up">
+                <button id="loadMoreVoices" class="btn btn-secondary">
+                    <i class="fas fa-sync"></i> Load More Voices
+                </button>
+                <div class="loading-spinner" style="display: none;">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Share Your Voice Section -->
+    <section class="contribute-section" data-aos="fade-up">
+        <div class="container">
+            <div class="contribute-wrapper">
+                <div class="contribute-text">
+                    <h2>Your Voice Matters</h2>
+                    <p>Every perspective adds a new page to our book. Share your thoughts on what peace, love, unity, and Pan-Africanism mean to you.</p>
+                    <ul class="contribute-benefits">
+                        <li><i class="fas fa-check-circle"></i> Get featured in our weekly digest</li>
+                        <li><i class="fas fa-check-circle"></i> Connect with like-minded Africans</li>
+                        <li><i class="fas fa-check-circle"></i> Inspire positive change across the continent</li>
+                    </ul>
+                </div>
+                
+                <div class="contribute-form">
+                    <h3>Add Your Voice</h3>
+                    <form id="addVoiceForm">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" placeholder="Enter your name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Your Country</label>
+                            <select required>
+                                <option value="">Select your country</option>
+                                <option value="nigeria">Nigeria 🇳🇬</option>
+                                <option value="ghana">Ghana 🇬🇭</option>
+                                <option value="kenya">Kenya 🇰🇪</option>
+                                <option value="southafrica">South Africa 🇿🇦</option>
+                                <option value="ethiopia">Ethiopia 🇪🇹</option>
+                                <!-- Add all 54 African nations -->
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Topic</label>
+                            <div class="topic-selector">
+                                <label class="topic-option">
+                                    <input type="radio" name="topic" value="peace">
+                                    <span class="topic-label">☮️ Peace</span>
+                                </label>
+                                <label class="topic-option">
+                                    <input type="radio" name="topic" value="love">
+                                    <span class="topic-label">❤️ Love</span>
+                                </label>
+                                <label class="topic-option">
+                                    <input type="radio" name="topic" value="unity">
+                                    <span class="topic-label">🤝 Unity</span>
+                                </label>
+                                <label class="topic-option">
+                                    <input type="radio" name="topic" value="panafricanism">
+                                    <span class="topic-label">🌍 Pan-Africanism</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Your Message</label>
+                            <textarea placeholder="Share your thoughts on peace, love, unity, or Pan-Africanism..." maxlength="500" required></textarea>
+                            <span class="char-count">0/500</span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-feather-alt"></i> Add to Our Book
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Pan-African Peace Network</h3>
+                    <p>Uniting voices across Africa through peace, love, and solidarity.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="our-book.html">Our Book</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="news.html">News</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Get Involved</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Partner With Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pan-African Peace Network. All rights reserved.</p>
+                <p class="pan-african-colors">✊🏿🌍 Building the Africa We Want</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/our-book.js"></script>
+</body>
+</html>
