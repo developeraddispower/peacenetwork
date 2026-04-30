@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Events | Pan-African Peace Network</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/news.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Logo">
+                <span>Peace Network</span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="our-book.html">Our Book</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="news.html" class="active">News</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+            </ul>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- News Hero -->
+    <section class="news-hero">
+        <div class="container">
+            <div class="news-hero-content" data-aos="fade-up">
+                <h1>News & Events</h1>
+                <p>Stay updated with the latest stories, events, and initiatives from across the Pan-African community</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured News -->
+    <section class="featured-news">
+        <div class="container">
+            <div class="featured-news-card" data-aos="fade-up">
+                <div class="featured-image">
+                    <img src="assets/images/news-featured.jpg" alt="Featured News">
+                    <div class="featured-tag">Featured</div>
+                </div>
+                <div class="featured-content">
+                    <div class="news-meta">
+                        <span class="news-category">Events</span>
+                        <span class="news-date"><i class="far fa-calendar"></i> March 15, 2024</span>
+                        <span class="news-location"><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</span>
+                    </div>
+                    <h2>Pan-African Peace Summit 2024: Uniting for a Common Future</h2>
+                    <p>The annual Pan-African Peace Summit brings together leaders, activists, and community organizers from across the continent to discuss pathways to lasting peace and unity. This year's theme focuses on youth empowerment and digital innovation for peacebuilding.</p>
+                    <div class="featured-actions">
+                        <a href="#" class="btn btn-primary">Read Full Story</a>
+                        <button class="btn btn-outline register-event" data-event="summit2024">
+                            <i class="fas fa-calendar-check"></i> Register for Event
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Filters -->
+    <section class="news-filters" data-aos="fade-up">
+        <div class="container">
+            <div class="filter-bar">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="newsSearch" placeholder="Search news articles...">
+                </div>
+                
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All News</button>
+                    <button class="filter-btn" data-filter="events">Events</button>
+                    <button class="filter-btn" data-filter="community">Community</button>
+                    <button class="filter-btn" data-filter="education">Education</button>
+                    <button class="filter-btn" data-filter="summit">Summits</button>
+                    <button class="filter-btn" data-filter="peace">Peace Initiatives</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Grid -->
+    <section class="news-grid-section">
+        <div class="container">
+            <!-- Upcoming Events Sidebar -->
+            <div class="news-layout">
+                <div class="news-main">
+                    <div class="news-grid" id="newsGrid">
+                        <!-- News Card 1 -->
+                        <article class="news-card" data-category="events summit" data-aos="fade-up">
+                            <div class="news-card-image">
+                                <img src="assets/images/news1.jpg" alt="Peace Summit">
+                                <span class="card-category">Summit</span>
+                            </div>
+                            <div class="news-card-content">
+                                <div class="card-meta">
+                                    <span><i class="far fa-calendar"></i> Feb 28, 2024</span>
+                                    <span><i class="far fa-clock"></i> 5 min read</span>
+                                </div>
+                                <h3>African Youth Leadership Summit Concludes in Nairobi</h3>
+                                <p>Over 500 young leaders from 40 African nations gathered to discuss innovative approaches to peacebuilding and community development.</p>
+                                <div class="card-footer">
+                                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                    <div class="card-stats">
+                                        <span><i class="far fa-eye"></i> 1.2k</span>
+                                        <span><i class="far fa-comment"></i> 45</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- News Card 2 -->
+                        <article class="news-card" data-category="community peace" data-aos="fade-up" data-aos-delay="100">
+                            <div class="news-card-image">
+                                <img src="assets/images/news2.jpg" alt="Community Peace">
+                                <span class="card-category">Community</span>
+                            </div>
+                            <div class="news-card-content">
+                                <div class="card-meta">
+                                    <span><i class="far fa-calendar"></i> Feb 25, 2024</span>
+                                    <span><i class="far fa-clock"></i> 3 min read</span>
+                                </div>
+                                <h3>Grassroots Peace Initiative Transforms Conflict Zone in Mali</h3>
+                                <p>A community-led dialogue program has successfully mediated long-standing disputes between neighboring villages in rural Mali.</p>
+                                <div class="card-footer">
+                                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                    <div class="card-stats">
+                                        <span><i class="far fa-eye"></i> 890</span>
+                                        <span><i class="far fa-comment"></i> 32</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- News Card 3 -->
+                        <article class="news-card" data-category="education" data-aos="fade-up" data-aos-delay="200">
+                            <div class="news-card-image">
+                                <img src="assets/images/news3.jpg" alt="Education">
+                                <span class="card-category">Education</span>
+                            </div>
+                            <div class="news-card-content">
+                                <div class="card-meta">
+                                    <span><i class="far fa-calendar"></i> Feb 20, 2024</span>
+                                    <span><i class="far fa-clock"></i> 4 min read</span>
+                                </div>
+                                <h3>New Free Course: Pan-African History and Philosophy</h3>
+                                <p>We've launched a comprehensive course exploring the rich history of Pan-Africanism from Nkrumah to the African Union.</p>
+                                <div class="card-footer">
+                                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                    <div class="card-stats">
+                                        <span><i class="far fa-eye"></i> 1.5k</span>
+                                        <span><i class="far fa-comment"></i> 67</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- News Card 4 -->
+                        <article class="news-card" data-category="events peace" data-aos="fade-up" data-aos-delay="300">
+                            <div class="news-card-image">
+                                <img src="assets/images/news4.jpg" alt="Peace Concert">
+                                <span class="card-category">Events</span>
+                            </div>
+                            <div class="news-card-content">
+                                <div class="card-meta">
+                                    <span><i class="far fa-calendar"></i> Feb 15, 2024</span>
+                                    <span><i class="far fa-clock"></i> 3 min read</span>
+                                </div>
+                                <h3>Unity Concert Brings Together Artists from 20 African Nations</h3>
+                                <p>Musicians and artists gathered in Lagos for a historic concert promoting peace through cultural expression.</p>
+                                <div class="card-footer">
+                                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                    <div class="card-stats">
+                                        <span><i class="far fa-eye"></i> 2.1k</span>
+                                        <span><i class="far fa-comment"></i> 89</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- News Card 5 -->
+                        <article class="news-card" data-category="community" data-aos="fade-up">
+                            <div class="news-card-image">
+                                <img src="assets/images/news5.jpg" alt="Women Peace">
+                                <span class="card-category">Community</span>
+                            </div>
+                            <div class="news-card-content">
+                                <div class="card-meta">
+                                    <span><i class="far fa-calendar"></i> Feb 10, 2024</span>
+                                    <span><i class="far fa-clock"></i> 5 min read</span>
+                                </div>
+                                <h3>Women Peacebuilders Network Expands to 30 Countries</h3>
+                                <p>The network of women mediators and peacebuilders continues to grow, bringing vital perspectives to conflict resolution.</p>
+                                <div class="card-footer">
+                                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                    <div class="card-stats">
+                                        <span><i class="far fa-eye"></i> 756</span>
+                                        <span><i class="far fa-comment"></i> 28</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- News Card 6 -->
+                        <article class="news-card" data-category="education summit" data-aos="fade-up" data-aos-delay="100">
+                            <div class="news-card-image">
+                                <img src="assets/images/news6.jpg" alt="Digital Peace">
+                                <span class="card-category">Education</span>
+                            </div>
+                            <div class="news-card-content">
+                                <div class="card-meta">
+                                    <span><i class="far fa-calendar"></i> Feb 5, 2024</span>
+                                    <span><i class="far fa-clock"></i> 4 min read</span>
+                                </div>
+                                <h3>Digital Tools for Peace: New Online Platform Launches</h3>
+                                <p>Innovative digital platform connects peacebuilders across Africa for real-time collaboration and resource sharing.</p>
+                                <div class="card-footer">
+                                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                    <div class="card-stats">
+                                        <span><i class="far fa-eye"></i> 980</span>
+                                        <span><i class="far fa-comment"></i> 41</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Load More -->
+                    <div class="load-more-container" data-aos="fade-up">
+                        <button id="loadMoreNews" class="btn btn-secondary">
+                            <i class="fas fa-sync"></i> Load More Articles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="news-sidebar">
+                    <!-- Upcoming Events -->
+                    <div class="sidebar-card" data-aos="fade-up">
+                        <h3><i class="fas fa-calendar-alt"></i> Upcoming Events</h3>
+                        
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="event-day">15</span>
+                                <span class="event-month">Mar</span>
+                            </div>
+                            <div class="event-details">
+                                <h4>Pan-African Peace Summit 2024</h4>
+                                <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
+                                <a href="#" class="event-link">Register Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="event-day">22</span>
+                                <span class="event-month">Mar</span>
+                            </div>
+                            <div class="event-details">
+                                <h4>Youth Peace Forum</h4>
+                                <p><i class="fas fa-map-marker-alt"></i> Virtual Event</p>
+                                <a href="#" class="event-link">Join Online</a>
+                            </div>
+                        </div>
+                        
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="event-day">05</span>
+                                <span class="event-month">Apr</span>
+                            </div>
+                            <div class="event-details">
+                                <h4>Community Dialogue Workshop</h4>
+                                <p><i class="fas fa-map-marker-alt"></i> Cape Town, South Africa</p>
+                                <a href="#" class="event-link">Learn More</a>
+                            </div>
+                        </div>
+                        
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="event-day">18</span>
+                                <span class="event-month">Apr</span>
+                            </div>
+                            <div class="event-details">
+                                <h4>Pan-African Cultural Festival</h4>
+                                <p><i class="fas fa-map-marker-alt"></i> Accra, Ghana</p>
+                                <a href="#" class="event-link">Get Tickets</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="sidebar-card" data-aos="fade-up">
+                        <h3><i class="fas fa-folder"></i> Categories</h3>
+                        <ul class="category-list">
+                            <li><a href="#" data-filter="events">Events <span>12</span></a></li>
+                            <li><a href="#" data-filter="community">Community <span>18</span></a></li>
+                            <li><a href="#" data-filter="education">Education <span>15</span></a></li>
+                            <li><a href="#" data-filter="summit">Summits <span>8</span></a></li>
+                            <li><a href="#" data-filter="peace">Peace Initiatives <span>22</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="sidebar-card newsletter-card" data-aos="fade-up">
+                        <h3><i class="fas fa-envelope"></i> Subscribe</h3>
+                        <p>Get the latest news and events delivered to your inbox.</p>
+                        <form class="sidebar-newsletter">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i class="fas fa-paper-plane"></i> Subscribe
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Popular Tags -->
+                    <div class="sidebar-card" data-aos="fade-up">
+                        <h3><i class="fas fa-tags"></i> Popular Tags</h3>
+                        <div class="tags-cloud">
+                            <a href="#" class="tag">#Peace</a>
+                            <a href="#" class="tag">#Unity</a>
+                            <a href="#" class="tag">#PanAfricanism</a>
+                            <a href="#" class="tag">#Youth</a>
+                            <a href="#" class="tag">#Education</a>
+                            <a href="#" class="tag">#Community</a>
+                            <a href="#" class="tag">#Conflict</a>
+                            <a href="#" class="tag">#Dialogue</a>
+                            <a href="#" class="tag">#Culture</a>
+                            <a href="#" class="tag">#Leadership</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Registration Modal -->
+    <div class="modal" id="eventModal">
+        <div class="modal-content event-modal">
+            <div class="modal-header">
+                <h3 id="eventModalTitle">Register for Event</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="eventRegistrationForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Country</label>
+                            <select required>
+                                <option value="">Select Country</option>
+                                <option>Nigeria</option>
+                                <option>Ghana</option>
+                                <option>Kenya</option>
+                                <option>South Africa</option>
+                                <option>Ethiopia</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Organization (Optional)</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Any special requirements?</label>
+                        <textarea rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-check"></i> Confirm Registration
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="news-cta" data-aos="fade-up">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Have a Story to Share?</h2>
+                <p>We're always looking for inspiring stories of peace and unity from across Africa.</p>
+                <a href="contact.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-pen"></i> Submit Your Story
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Pan-African Peace Network</h3>
+                    <p>Uniting voices across Africa through peace, love, and solidarity.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="our-book.html">Our Book</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="news.html">News</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Get Involved</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Partner With Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pan-African Peace Network. All rights reserved.</p>
+                <p class="pan-african-colors">✊🏿🌍 Building the Africa We Want</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/news.js"></script>
+</body>
+</html>
