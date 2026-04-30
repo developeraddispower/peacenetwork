@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Pan-African Peace Network</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Lightbox2 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Logo">
+                <span>Peace Network</span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="our-book.html">Our Book</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+            </ul>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Hero -->
+    <section class="gallery-hero">
+        <div class="container">
+            <div class="gallery-hero-content" data-aos="fade-up">
+                <h1>Our Gallery</h1>
+                <p>Capturing moments of peace, unity, and Pan-African spirit across the continent</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="gallery-filters" data-aos="fade-up">
+        <div class="container">
+            <div class="filter-bar">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-th"></i> All
+                    </button>
+                    <button class="filter-btn" data-filter="events">
+                        <i class="fas fa-calendar-star"></i> Events
+                    </button>
+                    <button class="filter-btn" data-filter="community">
+                        <i class="fas fa-users"></i> Community
+                    </button>
+                    <button class="filter-btn" data-filter="culture">
+                        <i class="fas fa-palette"></i> Culture
+                    </button>
+                    <button class="filter-btn" data-filter="education">
+                        <i class="fas fa-graduation-cap"></i> Education
+                    </button>
+                    <button class="filter-btn" data-filter="summit">
+                        <i class="fas fa-handshake"></i> Summits
+                    </button>
+                </div>
+                
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid">
+                        <i class="fas fa-th-large"></i>
+                    </button>
+                    <button class="view-btn" data-view="masonry">
+                        <i class="fas fa-th"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <!-- Featured Album -->
+            <div class="featured-album" data-aos="fade-up">
+                <h2><i class="fas fa-star"></i> Featured Album: Pan-African Peace Summit 2024</h2>
+                <div class="featured-grid">
+                    <div class="featured-item large">
+                        <a href="assets/images/gallery/summit1.jpg" data-lightbox="featured" data-title="Peace Summit Opening Ceremony">
+                            <img src="assets/images/gallery/summit1.jpg" alt="Peace Summit">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                                <span>Opening Ceremony</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="featured-item">
+                        <a href="assets/images/gallery/summit2.jpg" data-lightbox="featured" data-title="Youth Panel Discussion">
+                            <img src="assets/images/gallery/summit2.jpg" alt="Youth Panel">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                                <span>Youth Panel</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="featured-item">
+                        <a href="assets/images/gallery/summit3.jpg" data-lightbox="featured" data-title="Cultural Performance">
+                            <img src="assets/images/gallery/summit3.jpg" alt="Cultural Performance">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                                <span>Cultural Night</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Gallery Grid -->
+            <div class="gallery-grid" id="galleryGrid" data-aos="fade-up">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item" data-category="events summit">
+                    <a href="assets/images/gallery/photo1.jpg" data-lightbox="gallery" data-title="African Union Peace Conference - Delegates from across Africa gathered in Addis Ababa">
+                        <img src="assets/images/gallery/photo1.jpg" alt="AU Peace Conference" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-search-plus"></i>
+                                <h3>AU Peace Conference</h3>
+                                <p>Delegates from 54 nations</p>
+                                <span class="overlay-category">Summit</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item" data-category="community">
+                    <a href="assets/images/gallery/photo2.jpg" data-lightbox="gallery" data-title="Community Peace Walk - Women and youth marching for peace in Lagos">
+                        <img src="assets/images/gallery/photo2.jpg" alt="Community Peace Walk" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-search-plus"></i>
+                                <h3>Community Peace Walk</h3>
+                                <p>Women and youth united</p>
+                                <span class="overlay-category">Community</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item" data-category="culture">
+                    <a href="assets/images/gallery/photo3.jpg" data-lightbox="gallery" data-title="Traditional Dance Performance - Celebrating African cultural heritage">
+                        <img src="assets/images/gallery/photo3.jpg" alt="Traditional Dance" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-search-plus"></i>
+                                <h3>Cultural Dance</h3>
+                                <p>Celebrating heritage</p>
+                                <span class="overlay-category">Culture</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item" data-category="education">
+                    <a href="assets/images/gallery/photo4.jpg" data-lightbox="gallery" data-title="Peace Education Workshop - Training the next generation of peacebuilders">
+                        <img src="assets/images/gallery/photo4.jpg" alt="Peace Workshop" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-search-plus"></i>
+                                <h3>Peace Workshop</h3>
+                                <p>Training future leaders</p>
+                                <span class="overlay-category">Education</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item tall" data-category="community culture">
+                    <a href="assets/images/gallery/photo5.jpg" data-lightbox="gallery" data-title="Intercultural Exchange - Communities sharing traditions and building bridges">
+                        <img src="assets/images/gallery/photo5.jpg" alt="Cultural Exchange" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-search-plus"></i>
+                                <h3>Cultural Exchange</h3>
+                                <p>Building bridges through culture</p>
+                                <span class="overlay-category">Culture</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item" data-category="events">
+                    <a href="assets/images/gallery/photo6.jpg" data-lightbox="gallery" data-title="Unity Concert - Musicians promoting peace through art">
+                        <img src="assets/images/gallery/photo6.jpg" alt="Unity Concert" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-search-plus"></i>
+                                <h3>Unity Concert</h3>
+                                <p>Music for peace</p>
+                                <span class="overlay-category">Events</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item wide" data-category="summit education">
+                    <a href="assets/images/gallery/photo7.jpg" data-lightbox="gallery" data-title="Youth Leadership Summit - Young leaders developing peace initiatives">
+                        <img src="assets/images/gallery/photo7.jpg" alt="Youth Summit" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-search-plus"></i>
+                                <h3>Youth Leadership Summit</h3>
+                                <p>Young changemakers</p>
+                                <span class="overlay-category">Summit</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item" data-category="community">
+                    <a href="assets/images/gallery/photo8.jpg" data-lightbox="gallery" data-title="Tree Planting for Peace - Environmental peacebuilding initiative in Kenya">
+                        <img src="assets/images/gallery/photo8.jpg" alt="Tree Planting" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-search-plus"></i>
+                                <h3>Tree Planting for Peace</h3>
+                                <p>Environmental peacebuilding</p>
+                                <span class="overlay-category">Community</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item 9 -->
+                <div class="gallery-item" data-category="culture events">
+                    <a href="assets/images/gallery/photo9.jpg" data-lightbox="gallery" data-title="African Art Exhibition - Artists showcasing works on peace and unity">
+                        <img src="assets/images/gallery/photo9.jpg" alt="Art Exhibition" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-search-plus"></i>
+                                <h3>Art Exhibition</h3>
+                                <p>Art for social change</p>
+                                <span class="overlay-category">Culture</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item 10 -->
+                <div class="gallery-item" data-category="education community">
+                    <a href="assets/images/gallery/photo10.jpg" data-lightbox="gallery" data-title="Dialogue Circle - Community members engaging in peace dialogues">
+                        <img src="assets/images/gallery/photo10.jpg" alt="Dialogue Circle" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-search-plus"></i>
+                                <h3>Dialogue Circle</h3>
+                                <p>Community conversations</p>
+                                <span class="overlay-category">Education</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item 11 -->
+                <div class="gallery-item tall" data-category="summit">
+                    <a href="assets/images/gallery/photo11.jpg" data-lightbox="gallery" data-title="Women Leaders Forum - African women leaders discussing peace strategies">
+                        <img src="assets/images/gallery/photo11.jpg" alt="Women Leaders" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-search-plus"></i>
+                                <h3>Women Leaders Forum</h3>
+                                <p>Women shaping peace</p>
+                                <span class="overlay-category">Summit</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Gallery Item 12 -->
+                <div class="gallery-item" data-category="events culture">
+                    <a href="assets/images/gallery/photo12.jpg" data-lightbox="gallery" data-title="Pan-African Food Festival - Sharing meals, sharing culture, sharing peace">
+                        <img src="assets/images/gallery/photo12.jpg" alt="Food Festival" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-search-plus"></i>
+                                <h3>Food Festival</h3>
+                                <p>Taste of Africa</p>
+                                <span class="overlay-category">Events</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Load More -->
+            <div class="load-more-container" data-aos="fade-up">
+                <button id="loadMoreGallery" class="btn btn-secondary">
+                    <i class="fas fa-plus"></i> Load More Photos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery Section -->
+    <section class="video-gallery" data-aos="fade-up">
+        <div class="container">
+            <h2>Video Highlights</h2>
+            <p class="video-subtitle">Watch inspiring moments from our events and initiatives</p>
+            
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="assets/images/gallery/video-thumb1.jpg" alt="Peace Summit Highlights" loading="lazy">
+                        <div class="play-button">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Peace Summit 2024 Highlights</h3>
+                        <p>Relive the best moments from the Pan-African Peace Summit</p>
+                        <span><i class="fas fa-clock"></i> 5:30 min</span>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="assets/images/gallery/video-thumb2.jpg" alt="Community Stories" loading="lazy">
+                        <div class="play-button">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Voices of Unity: Community Stories</h3>
+                        <p>Hear inspiring stories from peacebuilders across Africa</p>
+                        <span><i class="fas fa-clock"></i> 8:15 min</span>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="assets/images/gallery/video-thumb3.jpg" alt="Cultural Performance" loading="lazy">
+                        <div class="play-button">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Cultural Night: Africa United</h3>
+                        <p>Traditional performances from across the continent</p>
+                        <span><i class="fas fa-clock"></i> 12:00 min</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div class="modal" id="videoModal">
+        <div class="modal-content video-modal">
+            <span class="modal-close">&times;</span>
+            <div class="video-container">
+                <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upload CTA -->
+    <section class="upload-cta" data-aos="fade-up">
+        <div class="container">
+            <div class="cta-box">
+                <div class="cta-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <h2>Share Your Moments</h2>
+                <p>Have photos or videos from peace events in your community? We'd love to feature them in our gallery.</p>
+                <a href="contact.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-upload"></i> Submit Your Photos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Preview Modal -->
+    <div class="modal" id="imagePreviewModal">
+        <div class="modal-content image-preview-modal">
+            <span class="modal-close">&times;</span>
+            <img id="previewImage" src="" alt="Preview">
+            <div class="image-preview-info">
+                <h3 id="previewTitle"></h3>
+                <p id="previewDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Pan-African Peace Network</h3>
+                    <p>Uniting voices across Africa through peace, love, and solidarity.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="our-book.html">Our Book</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="news.html">News</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Get Involved</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Partner With Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pan-African Peace Network. All rights reserved.</p>
+                <p class="pan-african-colors">✊🏿🌍 Building the Africa We Want</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>
