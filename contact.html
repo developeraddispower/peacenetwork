@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Pan-African Peace Network</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Logo">
+                <span>Peace Network</span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="our-book.html">Our Book</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+            </ul>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content" data-aos="fade-up">
+                <h1>Get in Touch</h1>
+                <p>We'd love to hear from you. Whether you have questions, ideas, or want to get involved, reach out to us.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper" data-aos="fade-right">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName">
+                                    <i class="fas fa-user"></i> Full Name *
+                                </label>
+                                <input type="text" id="contactName" placeholder="Your full name" required>
+                                <span class="error-message" id="nameError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactEmail">
+                                    <i class="fas fa-envelope"></i> Email Address *
+                                </label>
+                                <input type="email" id="contactEmail" placeholder="your@email.com" required>
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactCountry">
+                                    <i class="fas fa-globe-africa"></i> Country
+                                </label>
+                                <select id="contactCountry">
+                                    <option value="">Select your country</option>
+                                    <option>Nigeria 🇳🇬</option>
+                                    <option>Ghana 🇬🇭</option>
+                                    <option>Kenya 🇰🇪</option>
+                                    <option>South Africa 🇿🇦</option>
+                                    <option>Ethiopia 🇪🇹</option>
+                                    <option>Tanzania 🇹🇿</option>
+                                    <option>Uganda 🇺🇬</option>
+                                    <option>Rwanda 🇷🇼</option>
+                                    <option>Senegal 🇸🇳</option>
+                                    <option>Cameroon 🇨🇲</option>
+                                    <option>Ivory Coast 🇨🇮</option>
+                                    <option>Zimbabwe 🇿🇼</option>
+                                    <option>Botswana 🇧🇼</option>
+                                    <option>Namibia 🇳🇦</option>
+                                    <option>Egypt 🇪🇬</option>
+                                    <option>Morocco 🇲🇦</option>
+                                    <option>Other African Nation</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactSubject">
+                                    <i class="fas fa-tag"></i> Subject *
+                                </label>
+                                <select id="contactSubject" required>
+                                    <option value="">Select a subject</option>
+                                    <option>General Inquiry</option>
+                                    <option>Course Questions</option>
+                                    <option>Partnership Opportunities</option>
+                                    <option>Volunteer Interest</option>
+                                    <option>Submit a Story</option>
+                                    <option>Technical Support</option>
+                                    <option>Media & Press</option>
+                                    <option>Other</option>
+                                </select>
+                                <span class="error-message" id="subjectError"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactMessage">
+                                <i class="fas fa-comment"></i> Your Message *
+                            </label>
+                            <textarea id="contactMessage" rows="6" placeholder="Tell us how we can help you..." required></textarea>
+                            <span class="char-count">0/1000</span>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletterSignup" checked>
+                                <span>Subscribe to our newsletter for updates on peace and unity initiatives</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info Sidebar -->
+                <div class="contact-info-wrapper" data-aos="fade-left">
+                    <!-- Quick Contact -->
+                    <div class="contact-info-card">
+                        <h3>Contact Information</h3>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email Us</h4>
+                                <a href="mailto:info@panafricanpeace.org">info@panafricanpeace.org</a>
+                                <a href="mailto:support@panafricanpeace.org">support@panafricanpeace.org</a>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Call Us</h4>
+                                <a href="tel:+233501234567">+233 50 123 4567 (Ghana)</a>
+                                <a href="tel:+254701234567">+254 70 123 4567 (Kenya)</a>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Visit Us</h4>
+                                <p>Pan-African Peace Center<br>Independence Avenue<br>Accra, Ghana</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Working Hours</h4>
+                                <p>Monday - Friday: 8:00 AM - 6:00 PM (GMT)<br>Saturday: 9:00 AM - 1:00 PM<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="social-card">
+                        <h3>Follow Us</h3>
+                        <p>Stay connected with our community</p>
+                        
+                        <div class="social-links-large">
+                            <a href="#" class="social-link facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="#" class="social-link twitter">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="#" class="social-link instagram">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="#" class="social-link youtube">
+                                <i class="fab fa-youtube"></i>
+                                <span>YouTube</span>
+                            </a>
+                            <a href="#" class="social-link whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp Community</span>
+                            </a>
+                            <a href="#" class="social-link linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="quick-links-card">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="our-book.html"><i class="fas fa-book-open"></i> Explore Our Book</a></li>
+                            <li><a href="courses.html"><i class="fas fa-graduation-cap"></i> Browse Free Courses</a></li>
+                            <li><a href="about.html"><i class="fas fa-info-circle"></i> About Our Mission</a></li>
+                            <li><a href="news.html"><i class="fas fa-newspaper"></i> Latest News</a></li>
+                            <li><a href="gallery.html"><i class="fas fa-images"></i> Photo Gallery</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section" data-aos="fade-up">
+        <div class="container">
+            <h2>Find Us</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.123456789!2d-0.186964!3d5.603717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMzYnMTMuNCJOIDDCsDExJzEzLjEiVw!5e0!3m2!1sen!2sgh!4v1234567890" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            
+            <div class="map-offices">
+                <div class="office-card">
+                    <h3><i class="fas fa-building"></i> Headquarters</h3>
+                    <p>Pan-African Peace Center<br>Independence Avenue<br>Accra, Ghana</p>
+                </div>
+                
+                <div class="office-card">
+                    <h3><i class="fas fa-building"></i> East Africa Office</h3>
+                    <p>Unity House, Kenyatta Avenue<br>Nairobi, Kenya</p>
+                </div>
+                
+                <div class="office-card">
+                    <h3><i class="fas fa-building"></i> Southern Africa Office</h3>
+                    <p>Freedom Towers, Nelson Mandela Square<br>Johannesburg, South Africa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 data-aos="fade-up">Frequently Asked Questions</h2>
+            <p class="faq-subtitle" data-aos="fade-up">Quick answers to common questions</p>
+            
+            <div class="faq-grid" data-aos="fade-up">
+                <div class="faq-card">
+                    <div class="faq-header">
+                        <h3>How do I enroll in a course?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-body">
+                        <p>Simply create a free account, browse our course catalog, and click "Enroll Now" on any course. All our courses are completely free!</p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-header">
+                        <h3>How can I contribute my voice to "Our Book"?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-body">
+                        <p>Visit the "Our Book" page and fill out the contribution form. Your voice will be reviewed and added to our collective book of wisdom.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-header">
+                        <h3>Is the platform really free?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-body">
+                        <p>Yes! The Pan-African Peace Network is completely free. We believe knowledge and unity should be accessible to all Africans.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-header">
+                        <h3>How can I become a partner?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-body">
+                        <p>Contact us through the form above or email partners@panafricanpeace.org. We'd love to collaborate with organizations that share our vision.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-header">
+                        <h3>Do you offer certificates?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-body">
+                        <p>Yes! Upon completing a course, you'll receive a free digital certificate that you can download and share.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-card">
+                    <div class="faq-header">
+                        <h3>How can I volunteer?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-body">
+                        <p>We welcome volunteers! Select "Volunteer Interest" in the subject dropdown above and tell us about your skills and interests.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content success-modal">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Message Sent Successfully!</h2>
+            <p>Thank you for reaching out. We'll get back to you within 24-48 hours.</p>
+            <p class="success-subtitle">Check your email for a confirmation.</p>
+            <button class="btn btn-primary" id="successClose">
+                <i class="fas fa-check"></i> Done
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Pan-African Peace Network</h3>
+                    <p>Uniting voices across Africa through peace, love, and solidarity.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="our-book.html">Our Book</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="news.html">News</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Get Involved</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Partner With Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pan-African Peace Network. All rights reserved.</p>
+                <p class="pan-african-colors">✊🏿🌍 Building the Africa We Want</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>
