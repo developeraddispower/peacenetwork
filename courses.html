@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Courses | Pan-African Peace Network</title>
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -15,8 +17,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/courses.css">
-    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/courses-modern.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -24,7 +25,7 @@
         <div class="nav-container">
             <div class="logo">
                 <img src="assets/images/logo.png" alt="Logo">
-                <span>Peace Network</span>
+                <span>Peace<span class="accent">Network</span></span>
             </div>
             
             <ul class="nav-menu">
@@ -50,25 +51,26 @@
     <section class="courses-hero">
         <div class="container">
             <div class="courses-hero-content" data-aos="fade-up">
-                <h1>📚 Free Knowledge for African Unity</h1>
+                <div class="section-badge">📚 Free Education</div>
+                <h1>Knowledge for <span class="gradient-text">African Unity</span></h1>
                 <p>Empower yourself with courses on peacebuilding, conflict resolution, Pan-African history, and community leadership. All completely free.</p>
                 
                 <div class="hero-stats">
                     <div class="hero-stat">
-                        <i class="fas fa-book-open"></i>
-                        <span>50+ Courses</span>
+                        <span class="hero-stat-number">50+</span>
+                        <span class="hero-stat-label">Courses</span>
                     </div>
                     <div class="hero-stat">
-                        <i class="fas fa-user-graduate"></i>
-                        <span>15,000+ Students</span>
+                        <span class="hero-stat-number">15K+</span>
+                        <span class="hero-stat-label">Students</span>
                     </div>
                     <div class="hero-stat">
-                        <i class="fas fa-globe-africa"></i>
-                        <span>54 Nations</span>
+                        <span class="hero-stat-number">54</span>
+                        <span class="hero-stat-label">Nations</span>
                     </div>
                     <div class="hero-stat">
-                        <i class="fas fa-certificate"></i>
-                        <span>Free Certificates</span>
+                        <span class="hero-stat-number">Free</span>
+                        <span class="hero-stat-label">Certificates</span>
                     </div>
                 </div>
             </div>
@@ -130,15 +132,15 @@
                 </div>
                 <div class="featured-content">
                     <div class="featured-text">
-                        <span class="course-category">Pan-African Studies</span>
+                        <span class="course-tag">Pan-African Studies</span>
                         <h2>Pan-Africanism: From Nkrumah to the African Union</h2>
-                        <p>Explore the rich history of Pan-Africanism, from the early visionaries to modern continental integration. Understand the philosophies that shaped Africa's unity movement.</p>
+                        <p>Explore the rich history of Pan-Africanism, from the early visionaries to modern continental integration.</p>
                         
                         <div class="course-info-tags">
                             <span><i class="fas fa-clock"></i> 8 Weeks</span>
                             <span><i class="fas fa-signal"></i> All Levels</span>
                             <span><i class="fas fa-users"></i> 3,456 Enrolled</span>
-                            <span><i class="fas fa-star" style="color: #FCD116;"></i> 4.8 (234 reviews)</span>
+                            <span class="stars"><i class="fas fa-star"></i> 4.8 (234)</span>
                         </div>
                         
                         <div class="instructor-info">
@@ -150,11 +152,11 @@
                         </div>
                         
                         <div class="featured-actions">
-                            <a href="course-detail.html?id=panafricanism101" class="btn btn-primary btn-lg">
+                            <a href="course-detail.html?id=panafricanism101" class="btn btn-primary">
                                 <i class="fas fa-graduation-cap"></i> Enroll Now - Free
                             </a>
-                            <button class="btn btn-outline preview-btn">
-                                <i class="fas fa-play"></i> Preview Course
+                            <button class="btn btn-secondary preview-btn">
+                                <i class="fas fa-play"></i> Preview
                             </button>
                         </div>
                     </div>
@@ -172,42 +174,40 @@
     <!-- Course Categories Quick Links -->
     <section class="course-categories" data-aos="fade-up">
         <div class="container">
-            <h2>Explore by Category</h2>
+            <div class="section-header">
+                <h2>Explore by Category</h2>
+                <p>Find the perfect course for your journey</p>
+            </div>
             <div class="categories-grid">
                 <div class="category-card" data-category="peace">
-                    <i class="fas fa-dove fa-3x"></i>
+                    <div class="category-icon"><i class="fas fa-dove"></i></div>
                     <h3>Peace Studies</h3>
-                    <p>12 Courses</p>
+                    <span>12 Courses</span>
                 </div>
-                
                 <div class="category-card" data-category="history">
-                    <i class="fas fa-landmark fa-3x"></i>
+                    <div class="category-icon"><i class="fas fa-landmark"></i></div>
                     <h3>Pan-African History</h3>
-                    <p>8 Courses</p>
+                    <span>8 Courses</span>
                 </div>
-                
                 <div class="category-card" data-category="leadership">
-                    <i class="fas fa-users fa-3x"></i>
+                    <div class="category-icon"><i class="fas fa-users"></i></div>
                     <h3>Community Leadership</h3>
-                    <p>10 Courses</p>
+                    <span>10 Courses</span>
                 </div>
-                
                 <div class="category-card" data-category="conflict">
-                    <i class="fas fa-handshake fa-3x"></i>
+                    <div class="category-icon"><i class="fas fa-handshake"></i></div>
                     <h3>Conflict Resolution</h3>
-                    <p>7 Courses</p>
+                    <span>7 Courses</span>
                 </div>
-                
                 <div class="category-card" data-category="culture">
-                    <i class="fas fa-palette fa-3x"></i>
+                    <div class="category-icon"><i class="fas fa-palette"></i></div>
                     <h3>African Culture & Arts</h3>
-                    <p>9 Courses</p>
+                    <span>9 Courses</span>
                 </div>
-                
                 <div class="category-card" data-category="development">
-                    <i class="fas fa-seedling fa-3x"></i>
+                    <div class="category-icon"><i class="fas fa-seedling"></i></div>
                     <h3>Sustainable Development</h3>
-                    <p>6 Courses</p>
+                    <span>6 Courses</span>
                 </div>
             </div>
         </div>
@@ -223,193 +223,162 @@
             
             <div class="courses-grid" id="coursesGrid">
                 <!-- Course Card 1 -->
-                <div class="course-card" data-category="peace" data-level="beginner" data-duration="short" data-aos="fade-up">
+                <article class="course-card" data-category="peace" data-level="beginner" data-duration="short" data-aos="fade-up">
                     <div class="course-image">
-                        <img src="assets/images/course-peace101.jpg" alt="Introduction to Peace Studies">
-                        <span class="course-badge free">Free</span>
-                        <span class="course-level">Beginner</span>
+                        <img src="assets/images/course-peace101.jpg" alt="Peace Studies" loading="lazy">
+                        <span class="course-badge">Free</span>
                     </div>
-                    <div class="course-content">
-                        <span class="course-category">Peace Studies</span>
+                    <div class="course-body">
+                        <div class="course-tags">
+                            <span class="course-tag">Peace Studies</span>
+                            <span class="course-level">Beginner</span>
+                        </div>
                         <h3>Introduction to Peace Studies</h3>
-                        <p>Learn the foundations of peacebuilding, conflict analysis, and nonviolent communication.</p>
-                        
+                        <p>Learn the foundations of peacebuilding and nonviolent communication.</p>
                         <div class="course-meta">
                             <span><i class="fas fa-clock"></i> 4 Weeks</span>
                             <span><i class="fas fa-book"></i> 12 Lessons</span>
                         </div>
-                        
                         <div class="course-footer">
                             <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <span>4.5 (1.2k)</span>
+                                <i class="fas fa-star"></i> 4.5 <span>(1.2k)</span>
                             </div>
-                            <a href="course-detail.html?id=peace101" class="btn btn-small">Enroll Free</a>
+                            <a href="course-detail.html?id=peace101" class="btn btn-sm btn-primary">Enroll Free</a>
                         </div>
                     </div>
-                </div>
+                </article>
 
                 <!-- Course Card 2 -->
-                <div class="course-card" data-category="history" data-level="intermediate" data-duration="medium" data-aos="fade-up" data-aos-delay="100">
+                <article class="course-card" data-category="history" data-level="intermediate" data-duration="medium" data-aos="fade-up" data-aos-delay="100">
                     <div class="course-image">
-                        <img src="assets/images/course-africanhistory.jpg" alt="African Liberation History">
-                        <span class="course-badge free">Free</span>
-                        <span class="course-level">Intermediate</span>
+                        <img src="assets/images/course-africanhistory.jpg" alt="African History" loading="lazy">
+                        <span class="course-badge">Free</span>
                     </div>
-                    <div class="course-content">
-                        <span class="course-category">Pan-African History</span>
+                    <div class="course-body">
+                        <div class="course-tags">
+                            <span class="course-tag">Pan-African History</span>
+                            <span class="course-level">Intermediate</span>
+                        </div>
                         <h3>African Liberation Movements</h3>
-                        <p>Explore the struggles and triumphs of African independence movements across the continent.</p>
-                        
+                        <p>Explore the struggles and triumphs of African independence.</p>
                         <div class="course-meta">
                             <span><i class="fas fa-clock"></i> 6 Weeks</span>
                             <span><i class="fas fa-book"></i> 18 Lessons</span>
                         </div>
-                        
                         <div class="course-footer">
                             <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <span>4.9 (890)</span>
+                                <i class="fas fa-star"></i> 4.9 <span>(890)</span>
                             </div>
-                            <a href="course-detail.html?id=africanhistory" class="btn btn-small">Enroll Free</a>
+                            <a href="course-detail.html?id=africanhistory" class="btn btn-sm btn-primary">Enroll Free</a>
                         </div>
                     </div>
-                </div>
+                </article>
 
                 <!-- Course Card 3 -->
-                <div class="course-card" data-category="leadership" data-level="beginner" data-duration="medium" data-aos="fade-up" data-aos-delay="200">
+                <article class="course-card" data-category="leadership" data-level="beginner" data-duration="medium" data-aos="fade-up" data-aos-delay="200">
                     <div class="course-image">
-                        <img src="assets/images/course-leadership.jpg" alt="Community Leadership">
-                        <span class="course-badge free">Free</span>
-                        <span class="course-level">Beginner</span>
+                        <img src="assets/images/course-leadership.jpg" alt="Leadership" loading="lazy">
+                        <span class="course-badge">Free</span>
                     </div>
-                    <div class="course-content">
-                        <span class="course-category">Community Leadership</span>
+                    <div class="course-body">
+                        <div class="course-tags">
+                            <span class="course-tag">Community Leadership</span>
+                            <span class="course-level">Beginner</span>
+                        </div>
                         <h3>Grassroots Community Organizing</h3>
-                        <p>Develop skills to mobilize communities and create positive social change from the ground up.</p>
-                        
+                        <p>Develop skills to mobilize communities for positive change.</p>
                         <div class="course-meta">
                             <span><i class="fas fa-clock"></i> 5 Weeks</span>
                             <span><i class="fas fa-book"></i> 15 Lessons</span>
                         </div>
-                        
                         <div class="course-footer">
                             <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <span>4.2 (654)</span>
+                                <i class="fas fa-star"></i> 4.2 <span>(654)</span>
                             </div>
-                            <a href="course-detail.html?id=leadership101" class="btn btn-small">Enroll Free</a>
+                            <a href="course-detail.html?id=leadership101" class="btn btn-sm btn-primary">Enroll Free</a>
                         </div>
                     </div>
-                </div>
+                </article>
 
                 <!-- Course Card 4 -->
-                <div class="course-card" data-category="conflict" data-level="intermediate" data-duration="medium" data-aos="fade-up" data-aos-delay="300">
+                <article class="course-card" data-category="conflict" data-level="intermediate" data-duration="medium" data-aos="fade-up" data-aos-delay="300">
                     <div class="course-image">
-                        <img src="assets/images/course-conflict.jpg" alt="Conflict Resolution">
-                        <span class="course-badge free">Free</span>
-                        <span class="course-level">Intermediate</span>
+                        <img src="assets/images/course-conflict.jpg" alt="Conflict Resolution" loading="lazy">
+                        <span class="course-badge">Free</span>
                     </div>
-                    <div class="course-content">
-                        <span class="course-category">Conflict Resolution</span>
+                    <div class="course-body">
+                        <div class="course-tags">
+                            <span class="course-tag">Conflict Resolution</span>
+                            <span class="course-level">Intermediate</span>
+                        </div>
                         <h3>Mediation & Dialogue Facilitation</h3>
-                        <p>Master the art of mediating conflicts and facilitating productive dialogue in communities.</p>
-                        
+                        <p>Master the art of mediating conflicts in communities.</p>
                         <div class="course-meta">
                             <span><i class="fas fa-clock"></i> 6 Weeks</span>
                             <span><i class="fas fa-book"></i> 16 Lessons</span>
                         </div>
-                        
                         <div class="course-footer">
                             <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <span>4.6 (432)</span>
+                                <i class="fas fa-star"></i> 4.6 <span>(432)</span>
                             </div>
-                            <a href="course-detail.html?id=mediation101" class="btn btn-small">Enroll Free</a>
+                            <a href="course-detail.html?id=mediation101" class="btn btn-sm btn-primary">Enroll Free</a>
                         </div>
                     </div>
-                </div>
+                </article>
 
                 <!-- Course Card 5 -->
-                <div class="course-card" data-category="culture" data-level="all" data-duration="short" data-aos="fade-up">
+                <article class="course-card" data-category="culture" data-level="all" data-duration="short" data-aos="fade-up">
                     <div class="course-image">
-                        <img src="assets/images/course-culture.jpg" alt="African Culture">
-                        <span class="course-badge free">Free</span>
-                        <span class="course-level">All Levels</span>
+                        <img src="assets/images/course-culture.jpg" alt="African Art" loading="lazy">
+                        <span class="course-badge">Free</span>
                     </div>
-                    <div class="course-content">
-                        <span class="course-category">African Culture & Arts</span>
+                    <div class="course-body">
+                        <div class="course-tags">
+                            <span class="course-tag">African Culture & Arts</span>
+                            <span class="course-level">All Levels</span>
+                        </div>
                         <h3>African Art as Resistance</h3>
-                        <p>Discover how African artists have used their craft as tools for social change and unity.</p>
-                        
+                        <p>Discover how African artists use craft for social change.</p>
                         <div class="course-meta">
                             <span><i class="fas fa-clock"></i> 3 Weeks</span>
                             <span><i class="fas fa-book"></i> 9 Lessons</span>
                         </div>
-                        
                         <div class="course-footer">
                             <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <span>4.8 (321)</span>
+                                <i class="fas fa-star"></i> 4.8 <span>(321)</span>
                             </div>
-                            <a href="course-detail.html?id=africanart" class="btn btn-small">Enroll Free</a>
+                            <a href="course-detail.html?id=africanart" class="btn btn-sm btn-primary">Enroll Free</a>
                         </div>
                     </div>
-                </div>
+                </article>
 
                 <!-- Course Card 6 -->
-                <div class="course-card" data-category="development" data-level="advanced" data-duration="long" data-aos="fade-up" data-aos-delay="100">
+                <article class="course-card" data-category="development" data-level="advanced" data-duration="long" data-aos="fade-up" data-aos-delay="100">
                     <div class="course-image">
-                        <img src="assets/images/course-development.jpg" alt="Sustainable Development">
-                        <span class="course-badge free">Free</span>
-                        <span class="course-level">Advanced</span>
+                        <img src="assets/images/course-development.jpg" alt="Development" loading="lazy">
+                        <span class="course-badge">Free</span>
                     </div>
-                    <div class="course-content">
-                        <span class="course-category">Sustainable Development</span>
+                    <div class="course-body">
+                        <div class="course-tags">
+                            <span class="course-tag">Sustainable Development</span>
+                            <span class="course-level">Advanced</span>
+                        </div>
                         <h3>African Solutions for African Development</h3>
-                        <p>Explore indigenous approaches to sustainable development rooted in African wisdom.</p>
-                        
+                        <p>Explore indigenous approaches to sustainable development.</p>
                         <div class="course-meta">
                             <span><i class="fas fa-clock"></i> 8 Weeks</span>
                             <span><i class="fas fa-book"></i> 20 Lessons</span>
                         </div>
-                        
                         <div class="course-footer">
                             <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <span>4.1 (189)</span>
+                                <i class="fas fa-star"></i> 4.1 <span>(189)</span>
                             </div>
-                            <a href="course-detail.html?id=africandevelopment" class="btn btn-small">Enroll Free</a>
+                            <a href="course-detail.html?id=africandevelopment" class="btn btn-sm btn-primary">Enroll Free</a>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
 
-            <!-- Load More -->
             <div class="load-more-container" data-aos="fade-up">
                 <button id="loadMoreCourses" class="btn btn-secondary">
                     <i class="fas fa-plus"></i> Load More Courses
@@ -421,32 +390,32 @@
     <!-- How It Works -->
     <section class="how-it-works" data-aos="fade-up">
         <div class="container">
-            <h2>How It Works</h2>
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Four simple steps to start learning</p>
+            </div>
             <div class="steps-grid">
                 <div class="step-card">
                     <div class="step-number">1</div>
-                    <i class="fas fa-user-plus fa-3x"></i>
+                    <i class="fas fa-user-plus"></i>
                     <h3>Create Free Account</h3>
                     <p>Sign up in seconds and get access to all courses</p>
                 </div>
-                
                 <div class="step-card">
                     <div class="step-number">2</div>
-                    <i class="fas fa-search fa-3x"></i>
+                    <i class="fas fa-search"></i>
                     <h3>Browse Courses</h3>
                     <p>Explore our catalog of free courses on peace and unity</p>
                 </div>
-                
                 <div class="step-card">
                     <div class="step-number">3</div>
-                    <i class="fas fa-play-circle fa-3x"></i>
+                    <i class="fas fa-play-circle"></i>
                     <h3>Start Learning</h3>
                     <p>Watch videos, read materials, and complete exercises</p>
                 </div>
-                
                 <div class="step-card">
                     <div class="step-number">4</div>
-                    <i class="fas fa-certificate fa-3x"></i>
+                    <i class="fas fa-certificate"></i>
                     <h3>Earn Certificate</h3>
                     <p>Receive your free certificate upon course completion</p>
                 </div>
@@ -457,7 +426,10 @@
     <!-- Testimonials -->
     <section class="testimonials" data-aos="fade-up">
         <div class="container">
-            <h2>What Our Students Say</h2>
+            <div class="section-header">
+                <h2>What Our Students Say</h2>
+                <p>Hear from learners across Africa</p>
+            </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-content">
@@ -472,7 +444,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="testimonial-card">
                     <div class="testimonial-content">
                         <i class="fas fa-quote-left"></i>
@@ -486,7 +457,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="testimonial-card">
                     <div class="testimonial-content">
                         <i class="fas fa-quote-left"></i>
@@ -508,9 +478,9 @@
     <section class="cta-section" data-aos="fade-up">
         <div class="container">
             <div class="cta-content">
-                <h2>Ready to Start Your Learning Journey?</h2>
+                <h2>Ready to Start Learning?</h2>
                 <p>Join 15,000+ students across Africa learning about peace, unity, and Pan-Africanism.</p>
-                <a href="login.html" class="btn btn-primary btn-lg">
+                <a href="login.html" class="btn btn-accent">
                     <i class="fas fa-user-plus"></i> Create Free Account
                 </a>
             </div>
@@ -532,7 +502,6 @@
                         <a href="#"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
@@ -542,7 +511,6 @@
                         <li><a href="news.html">News</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-section">
                     <h4>Get Involved</h4>
                     <ul>
@@ -551,7 +519,6 @@
                         <li><a href="#">Partner With Us</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-section">
                     <h4>Newsletter</h4>
                     <form class="newsletter-form">
@@ -560,7 +527,6 @@
                     </form>
                 </div>
             </div>
-            
             <div class="footer-bottom">
                 <p>&copy; 2024 Pan-African Peace Network. All rights reserved.</p>
                 <p class="pan-african-colors">✊🏿🌍 Building the Africa We Want</p>
@@ -570,8 +536,8 @@
 
     <!-- Video Preview Modal -->
     <div class="modal" id="videoModal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
+        <div class="modal-content video-modal">
+            <span class="modal-close">&times;</span>
             <div class="video-container">
                 <iframe src="" frameborder="0" allowfullscreen></iframe>
             </div>
